@@ -2,9 +2,16 @@ package de.ait.todoList.dao;
 
 import de.ait.todoList.model.Task;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TodoListImpl implements TodoList{
+    private List<Task> taskList;
+
+    public TodoListImpl(List<Task> taskList) {
+        this.taskList = new ArrayList<>();
+    }
+
     @Override
     public void addTask(Task task) {
 
