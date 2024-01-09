@@ -6,20 +6,20 @@ import java.time.LocalDate;
 import java.util.List;
 
 public interface TodoList {
-    void addTask(Task task);  // Добавление задачи в список
+    String addTask(Task task);  // Добавление задачи в список
 
     void removeTask(int taskId);     // Удаление задачи из списка по идентификатору
 
     Task getTaskById(int taskId);     // Получение задачи по идентификатору
 
-
-    Task getTaskByName(String name);     // Получение задачи по имени
+    List<Task> getTaskByName(String name);     // Получение задачи по имени
 
     List<Task> getAllTasks();     // Получение списка всех задач
 
     List<Task> getСompletedTasks();     // Получение выполненых задач
 
     List<Task> getOutstandingTasks();     // Получение невыполненых задач
+    List<Task> getTasksByDate(LocalDate from, LocalDate to);
 
     void updateTaskStatus(int taskId, boolean newStatus);     // Обновление статуса задачи
 

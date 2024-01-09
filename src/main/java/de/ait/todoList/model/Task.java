@@ -5,14 +5,24 @@ import java.time.LocalDate;
 public class Task {
     private int id;
     private String nameTask;
+    private String description;
     private boolean taskStatus;
     private LocalDate date;
 
-    public Task(int id, String nameTask, boolean taskStatus, LocalDate date) {
+    public Task(int id, String nameTask, String description, boolean taskStatus, LocalDate date) {
         this.id = id;
         this.nameTask = nameTask;
+        this.description = description;
         this.taskStatus = taskStatus;
         this.date = date;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getId() {
@@ -67,6 +77,7 @@ public class Task {
         return "Task{" +
                 "id=" + id +
                 ", nameTask='" + nameTask + '\'' +
+                ", description='" + description + '\'' +
                 ", taskStatus=" + taskStatus +
                 ", date=" + date +
                 '}';
