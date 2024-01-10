@@ -16,6 +16,14 @@ public class Task {
         this.taskStatus = taskStatus;
         this.date = date;
     }
+    public Task(int id, String nameTask, String description, LocalDate date) {
+        this.id = id;
+        this.nameTask = nameTask;
+        this.description = description;
+        this.taskStatus = false;
+        this.date = date;
+    }
+
 
     public String getDescription() {
         return description;
@@ -74,12 +82,6 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Task{" +
-                "id=" + id +
-                ", nameTask='" + nameTask + '\'' +
-                ", description='" + description + '\'' +
-                ", taskStatus=" + taskStatus +
-                ", date=" + date +
-                '}';
+        return id + "," + nameTask + "," + description + "," + taskStatus + "," + date;
     }
 }

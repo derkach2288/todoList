@@ -54,7 +54,7 @@ public class TodoListImpl implements TodoList{
     }
 
     @Override
-    public List<Task> getOutstandingTasks() {
+    public List<Task> getUncompletedTasks() {
         return taskList.stream()
                 .filter(task -> task.isTaskStatus()==false).toList();
     }

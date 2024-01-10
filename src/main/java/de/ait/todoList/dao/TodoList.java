@@ -18,7 +18,7 @@ public interface TodoList {
 
     List<Task> getСompletedTasks();     // Получение выполненых задач
 
-    List<Task> getOutstandingTasks();     // Получение невыполненых задач
+    List<Task> getUncompletedTasks();     // Получение невыполненых задач
     List<Task> getTasksByDate(LocalDate from, LocalDate to);
 
     void updateTaskStatus(int taskId, boolean newStatus);     // Обновление статуса задачи

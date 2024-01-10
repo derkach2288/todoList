@@ -3,7 +3,6 @@ package de.ait.todoList.tests;
 import de.ait.todoList.dao.TodoList;
 import de.ait.todoList.dao.TodoListImpl;
 import de.ait.todoList.model.Task;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -66,9 +65,9 @@ class TodoListImplTest {
     }
 
     @Test
-    void getOutstandingTasks() {
+    void getUncompletedTasks() {
         List<Task> res = List.of(taskList.get(0), taskList.get(1));
-        assertEquals(res, todoList.getOutstandingTasks());
+        assertEquals(res, todoList.getUncompletedTasks());
 
     }
 
